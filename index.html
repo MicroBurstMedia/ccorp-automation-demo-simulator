@@ -1,0 +1,974 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.s1 {font: 12.0px 'Apple Color Emoji'}
+    span.s2 {font: 12.0px 'Lucida Grande'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Money Mission: Smart Business Adventure (Demo)&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg1:#667eea;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg2:#764ba2;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--card:#ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--shadow:rgba(0,0,0,.2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--blue:#4facfe;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--cyan:#00f2fe;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--green:#28a745;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--yellow:#ffc107;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--red:#dc3545;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--ink:#1f2937;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--muted:#6b7280;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>*{box-sizing:border-box;margin:0;padding:0}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height:100vh;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(135deg,var(--bg1),var(--bg2));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--ink);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.app{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width:1200px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:var(--card);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:22px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:0 20px 60px var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow:hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>header{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(135deg,var(--blue),var(--cyan));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:18px 18px 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position:relative;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header h1{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:1.7rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-shadow: 2px 2px 4px rgba(0,0,0,.2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom:8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header p{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity:.95;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:.95rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.topbar{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap:wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content:space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:12px 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:#f8fafc;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom:3px solid #e5e7eb;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.stats{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap:wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.stat{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid #e5e7eb;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:10px 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-width:130px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:0 6px 18px rgba(0,0,0,.06);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.stat .value{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:800;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:#0f172a;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.stat .label{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:.78rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top:3px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.controls{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap:wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content:flex-end;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:10px 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition:.2s;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:0 8px 22px rgba(0,0,0,.12);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(135deg,#667eea,#764ba2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:.92rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn:hover{transform:translateY(-2px)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn:active{transform:translateY(0)}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn.secondary{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--ink);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:2px solid #e5e7eb;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn.secondary:hover{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-color:#cbd5e1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transform:translateY(-1px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pill{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid #e5e7eb;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:8px 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:.88rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.toggle{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>user-select:none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.switch{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:44px;height:24px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:#cbd5e1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position:relative;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition:.2s;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-shrink:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.knob{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:18px;height:18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:50%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position:absolute;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>top:3px;left:3px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition:.2s;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:0 4px 10px rgba(0,0,0,.18);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.switch.on{background:var(--green)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.switch.on .knob{left:23px}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.main{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: 1.2fr .8fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 980px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.main{grid-template-columns:1fr}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.panel{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid #e5e7eb;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:0 10px 28px rgba(0,0,0,.08);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow:hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.panel-head{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:14px 14px 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom:1px solid #eef2f7;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content:space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.panel-head h2{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:1.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.panel-body{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.city-grid{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns:repeat(2, minmax(220px,1fr));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width:520px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.city-grid{grid-template-columns:1fr}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.building{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position:relative;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow:hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition:.2s;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height:105px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:0 10px 24px rgba(0,0,0,.14);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.building:hover{transform:translateY(-3px)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.building:active{transform:translateY(0)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.building h3{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom:6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.building p{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:.88rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity:.95;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height:1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.building small{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:block;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity:.9;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:700;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.b-parent{background:linear-gradient(135deg,#0ea5e9,#2563eb)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.b-operating{background:linear-gradient(135deg,#22c55e,#16a34a)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.b-holding{background:linear-gradient(135deg,#a855f7,#7c3aed)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.b-property{background:linear-gradient(135deg,#f59e0b,#f97316)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.b-nonprofit{background:linear-gradient(135deg,#ec4899,#db2777)}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mission-card{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(135deg,#f093fb,#f5576c);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:0 12px 28px rgba(0,0,0,.15);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation:fadeUp .35s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes fadeUp{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>from{opacity:0; transform:translateY(12px)}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>to{opacity:1; transform:translateY(0)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mission-top{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content:space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom:10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.badge{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:rgba(255,255,255,.22);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:7px 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:800;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:.85rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(10px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>white-space:nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.choices{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns:1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.choice{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--ink);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:3px solid transparent;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:800;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition:.2s;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align:left;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.choice:hover{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-color:#4facfe;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transform:scale(1.01);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:0 8px 18px rgba(79,172,254,.25);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.choice:disabled{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity:.8;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor:not-allowed;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transform:none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.choice.good{background:var(--green); color:white}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.choice.ok{background:var(--yellow); color:#1f2937}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.choice.bad{background:var(--red); color:white}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.feedback{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height:1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.feedback.show{display:block; animation:fadeUp .25s ease}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.feedback.success{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:#dcfce7;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:2px solid var(--green);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:#14532d;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.feedback.warn{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:#fef9c3;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:2px solid var(--yellow);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:#854d0e;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.feedback.error{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:#fee2e2;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:2px solid var(--red);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:#7f1d1d;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.coach{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:#0f172a;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:0 12px 30px rgba(0,0,0,.2);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.coach h3{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom:8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.coach p{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity:.95;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height:1.35rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.coach .hint{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:rgba(255,255,255,.08);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid rgba(255,255,255,.12);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.coach .hint.show{display:block}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.progress-wrap{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:#eef2ff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow:hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid #e5e7eb;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.progress-fill{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height:100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:0%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(90deg,var(--blue),var(--cyan));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition:width .35s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.toast{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position:fixed;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>top:-120px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>right:18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(135deg,#f093fb,#f5576c);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:14px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:0 16px 40px rgba(0,0,0,.25);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition:top .45s ease;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>z-index:9999;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width:320px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:800;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.toast.show{top:18px}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mini{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns:1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sandbox{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:#f8fafc;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px dashed #cbd5e1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sandbox h3{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom:10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.row{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap:wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content:space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top:10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>input[type="range"]{width:100%}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.money{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:900;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:#0f172a;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:1.05rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.muted{color:var(--muted); font-size:.88rem}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.divider{height:1px;background:#eef2f7;margin:12px 0}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tag{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:inline-flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:#f1f5f9;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid #e5e7eb;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:6px 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:800;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:#334155;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.results{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align:center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.results.active{display:block}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.results h2{font-size:1.35rem;margin-bottom:8px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.results .big{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:2.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:1000;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin:8px 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:#0f172a;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="app"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1&gt;<span class="s1">🎮</span> Money Mission: Smart Business Adventure&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Learn C-Corp structure + “Turbo Pay Lane” (Velocity Banking) in a kid-friendly way.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="progress-wrap" style="margin-top:10px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="progress-fill" id="progressFill"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="topbar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="stats"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="stat"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="value" id="stars"&gt;<span class="s1">⭐</span> 0&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="label"&gt;Stars Earned&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="stat"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="value" id="level"&gt;1&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="label"&gt;Level&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="stat"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="value" id="flow"&gt;<span class="s1">💧</span> Slow&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="label"&gt;Money Flow&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="stat"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="value" id="streak"&gt;0 <span class="s1">🔥</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="label"&gt;Smart Streak&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="controls"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pill"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="toggle" onclick="app.toggleTurbo()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="switch" id="turboSwitch"&gt;&lt;span class="knob"&gt;&lt;/span&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;strong&gt;<span class="s1">🚀</span> Turbo Pay Lane&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pill"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="toggle" onclick="app.toggleClassroom()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="switch" id="classSwitch"&gt;&lt;span class="knob"&gt;&lt;/span&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;strong&gt;<span class="s1">🏫</span> Classroom Mode&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="btn secondary" onclick="app.restart()"&gt;<span class="s1">🔄</span> Restart&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="main"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- LEFT: City Map --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;section class="panel"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="panel-head"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h2&gt;<span class="s1">🏙️</span> Business City Map&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag" id="missionTag"&gt;Mission 1 / 7&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="panel-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="muted"&gt;Click a building to see what it does. Then complete the mission on the right.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="city-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="building b-parent" onclick="app.openBuilding('parent')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3&gt;<span class="s1">🏢</span> Parent Company HQ&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p&gt;The Brain. It plans big moves and owns other companies.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;small&gt;Tap to learn <span class="s1">📘</span>&lt;/small&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="building b-operating" onclick="app.openBuilding('operating')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3&gt;<span class="s1">🏭</span> Operating Company&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p&gt;The Worker. It sells products/services and earns income.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;small&gt;Tap to learn <span class="s1">📘</span>&lt;/small&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="building b-holding" onclick="app.openBuilding('holding')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3&gt;<span class="s1">🏦</span> Holding Company Vault&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p&gt;The Saver. It protects assets and collects profits safely.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;small&gt;Tap to learn <span class="s1">📘</span>&lt;/small&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="building b-property" onclick="app.openBuilding('property')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3&gt;<span class="s1">🏠</span> Property Company&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p&gt;The Builder. It owns buildings, rent income, and repairs.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;small&gt;Tap to learn <span class="s1">📘</span>&lt;/small&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="building b-nonprofit" onclick="app.openBuilding('nonprofit')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3&gt;<span class="s1">🎓</span> Non-Profit School&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p&gt;The Teacher. It helps the community and builds trust.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;small&gt;Tap to learn <span class="s1">📘</span>&lt;/small&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="coach" id="buildingInfo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;<span class="s1">🤖</span> Coach Cash&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Click a building to learn what it does in your Business City!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="hint" id="coachHint"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- RIGHT: Mission + Sandbox --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;aside class="panel"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="panel-head"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h2&gt;<span class="s1">🧩</span> Mission Control&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="tag" id="difficultyTag"&gt;Easy&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="panel-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div id="missionArea"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="results" id="resultsScreen"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;<span class="s1">🎉</span> Mission Complete!&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="big" id="finalStars"&gt;<span class="s1">⭐</span> 0&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="muted" id="finalMsg"&gt;Great job!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="margin-top:12px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="btn" onclick="app.restart()"&gt;Play Again <span class="s1">🔄</span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="sandbox"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;<span class="s1">🧪</span> Sandbox Mode (Try It Your Way)&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="muted"&gt;Move the slider and see how Turbo Pay Lane changes the outcome.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="tag"&gt;<span class="s1">💰</span> Income&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="money" id="incomeLabel"&gt;$1000&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="range" min="200" max="5000" step="100" value="1000" id="incomeRange" /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="tag"&gt;<span class="s1">🧾</span> Bills&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="money" id="billsLabel"&gt;$600&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="range" min="100" max="4500" step="100" value="600" id="billsRange" /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="muted" id="sandboxResult"&gt;Tip: Turn on <span class="s1">🚀</span> Turbo Pay Lane for faster money flow!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/aside&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="toast" id="toast"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const app = {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Game state</p>
+<p class="p1"><span class="Apple-converted-space">      </span>missionIndex: 0,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>stars: 0,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>streak: 0,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>turboOn: false,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>classroomOn: false,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>difficulty: "Easy",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>totalMissions: 7,</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Missions (kid-friendly + C-Corp + Velocity Banking simplified)</p>
+<p class="p1"><span class="Apple-converted-space">      </span>missions: [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">          </span>title: "Client Payment Arrives!",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>text: "A business client pays your Operating Company $1,000. What do you do first?",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>hint: "Good businesses pay important bills on time and keep things organized.",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>choices: [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">🚀</span> Send money through Turbo Pay Lane (fast)", outcome: "good", stars: 3, msg: "Smart! You moved money fast and stayed organized." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">💸</span> Pay bills normally (slow)", outcome: "ok", stars: 2, msg: "Not bad. It works, but it’s slower and less efficient." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">😴</span> Do nothing", outcome: "bad", stars: 0, msg: "Oops! Bills can stack up when you wait too long." }</p>
+<p class="p1"><span class="Apple-converted-space">          </span>]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">          </span>title: "Parent Company Planning",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>text: "Your Parent Company HQ wants to invest in new equipment. What should happen?",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>hint: "Parent company plans. Operating company earns. Holding company protects.",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>choices: [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">🏭</span> Operating Company earns <span class="s2">→</span> HQ approves plan", outcome: "good", stars: 3, msg: "Correct! The Worker earns and the Brain decides the plan." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">🏦</span> Holding Company buys random stuff", outcome: "bad", stars: 0, msg: "Nope. The Vault protects money—no random spending!" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">🎓</span> Non-Profit pays for equipment", outcome: "bad", stars: 0, msg: "Not ideal. Non-profits help the community, not fund business gear." }</p>
+<p class="p1"><span class="Apple-converted-space">          </span>]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">          </span>title: "Property Repair Emergency!",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>text: "A pipe breaks in your Property Company building. Repairs cost $700 today.",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>hint: "Property company handles repairs. Turbo Pay Lane helps move money fast.",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>choices: [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">🚀</span> Use Turbo Pay Lane to pay repair fast", outcome: "good", stars: 3, msg: "Nice! Quick repair avoids bigger damage." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">⏳</span> Wait 5 days", outcome: "bad", stars: 0, msg: "Uh oh… delays can cause bigger problems and higher costs." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">📮</span> Mail a check and hope it arrives", outcome: "ok", stars: 1, msg: "It might work… but it’s slow and risky for emergencies." }</p>
+<p class="p1"><span class="Apple-converted-space">          </span>]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">          </span>title: "Holding Company Protection",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>text: "Your Operating Company made extra profit. Where should extra money go?",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>hint: "Holding company protects assets like a safe vault.",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>choices: [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">🏦</span> Move extra money to Holding Vault", outcome: "good", stars: 3, msg: "Correct! The Vault helps protect long-term money." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">🕹️</span> Spend it all on fun stuff", outcome: "bad", stars: 0, msg: "Fun is cool… but spending all profits hurts growth." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">📦</span> Hide it in a random drawer", outcome: "bad", stars: 0, msg: "Nope. Money needs systems, not hiding places." }</p>
+<p class="p1"><span class="Apple-converted-space">          </span>]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">          </span>title: "Non-Profit Trust Boost",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>text: "Your Non-Profit wants to host a free community workshop. Cost: $300.",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>hint: "Non-profit builds trust and helps people learn.",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>choices: [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">🎓</span> Approve workshop + track spending", outcome: "good", stars: 3, msg: "Great! Helping the community builds trust and reputation." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">🚫</span> Cancel because it’s not profit", outcome: "ok", stars: 1, msg: "You can… but you lose trust-building opportunities." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">💸</span> Spend $300 with no record", outcome: "bad", stars: 0, msg: "Bad idea. No tracking = confusion later." }</p>
+<p class="p1"><span class="Apple-converted-space">          </span>]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">          </span>title: "Turbo Pay Lane Challenge!",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>text: "Bills are due tomorrow and your cash is tight. How do you avoid getting stuck?",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>hint: "Velocity banking = faster flow using a smart pay lane.",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>choices: [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">🚀</span> Use Turbo Pay Lane to pay and recover fast", outcome: "good", stars: 3, msg: "That’s it! Fast flow keeps you from falling behind." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">🧊</span> Freeze and panic", outcome: "bad", stars: 0, msg: "No worries—panic slows you down. Use a plan!" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">🐢</span> Pay late and accept fees", outcome: "bad", stars: 0, msg: "Late fees are the enemy. Try to stay on time!" }</p>
+<p class="p1"><span class="Apple-converted-space">          </span>]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">          </span>title: "Final Boss: B2B Deal!",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>text: "A big company wants to pay you $2,500 for a contract. What’s the best flow?",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>hint: "Operating earns <span class="s2">→</span> Holding protects <span class="s2">→</span> Parent plans <span class="s2">→</span> Property manages <span class="s2">→</span> Non-profit supports trust.",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>choices: [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">🏭</span> Earn <span class="s2">→</span> <span class="s1">🚀</span> Turbo <span class="s2">→</span> <span class="s1">🏦</span> Protect <span class="s2">→</span> <span class="s1">🏢</span> Plan", outcome: "good", stars: 4, msg: "Perfect flow! That’s a real business system!" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">💸</span> Spend first <span class="s2">→</span> think later", outcome: "bad", stars: 0, msg: "Oops… that’s how businesses get stuck." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ label: "<span class="s1">🎓</span> Non-profit collects the money", outcome: "bad", stars: 0, msg: "Not correct. Operating company should collect business income." }</p>
+<p class="p1"><span class="Apple-converted-space">          </span>]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>],</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// UI init</p>
+<p class="p1"><span class="Apple-converted-space">      </span>init(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.renderMission();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.updateStats();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.bindSandbox();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.updateProgress();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>bindSandbox(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const incomeRange = document.getElementById("incomeRange");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const billsRange = document.getElementById("billsRange");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const update = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const income = Number(incomeRange.value);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const bills = Number(billsRange.value);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>document.getElementById("incomeLabel").textContent = "$" + income.toLocaleString();</p>
+<p class="p1"><span class="Apple-converted-space">          </span>document.getElementById("billsLabel").textContent = "$" + bills.toLocaleString();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>const result = document.getElementById("sandboxResult");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const turboBoost = this.turboOn ? 1.25 : 1.0;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const flowScore = Math.max(0, Math.round(((income - bills) / 100) * turboBoost));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>if(income &lt; bills){</p>
+<p class="p1"><span class="Apple-converted-space">            </span>result.textContent = "<span class="s1">⚠️</span> Bills are higher than income. Try lowering bills or increasing income!";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>} else if(this.turboOn){</p>
+<p class="p1"><span class="Apple-converted-space">            </span>result.textContent = `<span class="s1">🚀</span> Turbo ON! Your flow score is ${flowScore}. Fast money movement earns more stars!`;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>result.textContent = `<span class="s1">💧</span> Turbo OFF. Your flow score is ${flowScore}. Turn Turbo ON to speed things up!`;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>incomeRange.addEventListener("input", update);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>billsRange.addEventListener("input", update);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>update();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>toggleTurbo(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.turboOn = !this.turboOn;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const sw = document.getElementById("turboSwitch");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>sw.classList.toggle("on", this.turboOn);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.toast(this.turboOn ? "<span class="s1">🚀</span> Turbo Pay Lane is ON! Faster money flow!" : "<span class="s1">💧</span> Turbo Pay Lane is OFF. Normal speed.");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.updateStats();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.bindSandbox();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>toggleClassroom(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.classroomOn = !this.classroomOn;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const sw = document.getElementById("classSwitch");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>sw.classList.toggle("on", this.classroomOn);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const hintBox = document.getElementById("coachHint");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(this.classroomOn){</p>
+<p class="p1"><span class="Apple-converted-space">          </span>hintBox.classList.add("show");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>hintBox.textContent = "<span class="s1">🏫</span> Classroom Mode: Hints are ON. Great for learning!";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.toast("<span class="s1">🏫</span> Classroom Mode ON (Hints Enabled)");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>hintBox.classList.remove("show");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.toast("<span class="s1">🏫</span> Classroom Mode OFF");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>openBuilding(type){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const info = document.getElementById("buildingInfo");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const hint = document.getElementById("coachHint");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const map = {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>parent: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>title: "<span class="s1">🏢</span> Parent Company HQ",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text: "This is the Brain. It owns other companies and makes big decisions.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>tip: "Tip: The Brain doesn’t do the work— it directs the work."</p>
+<p class="p1"><span class="Apple-converted-space">          </span>},</p>
+<p class="p1"><span class="Apple-converted-space">          </span>operating: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>title: "<span class="s1">🏭</span> Operating Company",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text: "This is the Worker. It sells products/services and earns the money.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>tip: "Tip: The Worker creates income through real business activity."</p>
+<p class="p1"><span class="Apple-converted-space">          </span>},</p>
+<p class="p1"><span class="Apple-converted-space">          </span>holding: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>title: "<span class="s1">🏦</span> Holding Company Vault",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text: "This is the Vault. It protects assets and stores profits safely.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>tip: "Tip: The Vault helps reduce risk and keeps money organized."</p>
+<p class="p1"><span class="Apple-converted-space">          </span>},</p>
+<p class="p1"><span class="Apple-converted-space">          </span>property: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>title: "<span class="s1">🏠</span> Property Company",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text: "This company owns buildings and handles repairs, rent, and property costs.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>tip: "Tip: Property can earn money through rent and grow long-term."</p>
+<p class="p1"><span class="Apple-converted-space">          </span>},</p>
+<p class="p1"><span class="Apple-converted-space">          </span>nonprofit: {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>title: "<span class="s1">🎓</span> Non-Profit School",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text: "This helps the community and builds trust and reputation.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>tip: "Tip: Trust is powerful—people love businesses that give back."</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>info.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;<span class="s1">🤖</span> Coach Cash: ${map[type].title}&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;${map[type].text}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="hint ${this.classroomOn ? "show" : ""}" id="coachHint"&gt;${map[type].tip}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(!this.classroomOn){</p>
+<p class="p1"><span class="Apple-converted-space">          </span>// keep hidden</p>
+<p class="p1"><span class="Apple-converted-space">          </span>hint.classList.remove("show");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderMission(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const missionArea = document.getElementById("missionArea");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const results = document.getElementById("resultsScreen");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>results.classList.remove("active");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(this.missionIndex &gt;= this.totalMissions){</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.showResults();</p>
+<p class="p1"><span class="Apple-converted-space">          </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const m = this.missions[this.missionIndex];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Difficulty scaling (simple)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(this.missionIndex &gt;= 5) this.difficulty = "Hard";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else if(this.missionIndex &gt;= 3) this.difficulty = "Medium";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else this.difficulty = "Easy";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("difficultyTag").textContent = this.difficulty;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("missionTag").textContent = `Mission ${this.missionIndex + 1} / ${this.totalMissions}`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>missionArea.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="mission-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mission-top"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div style="font-weight:1000; font-size:1.05rem;"&gt;<span class="s1">🧩</span> ${m.title}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="badge"&gt;${this.turboOn ? "<span class="s1">🚀</span> Turbo ON" : "<span class="s1">💧</span> Turbo OFF"}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="opacity:.98; line-height:1.35rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>${m.text}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="choices" id="choices"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>${m.choices.map((c, idx) =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="choice" onclick="app.choose(${idx})"&gt;${c.label}&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>`).join("")}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="feedback" id="feedbackBox"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="coach"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;<span class="s1">🤖</span> Coach Cash&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;${this.classroomOn ? "Hint: " + m.hint : "Try your best! You can turn on Classroom Mode for hints."}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.updateProgress();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>choose(choiceIndex){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const m = this.missions[this.missionIndex];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const choice = m.choices[choiceIndex];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const buttons = document.querySelectorAll(".choice");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>buttons.forEach(btn =&gt; btn.disabled = true);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// turbo boosts "good" choices slightly</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let earned = choice.stars;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(this.turboOn &amp;&amp; choice.outcome === "good") earned += 1;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// streak logic</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(choice.outcome === "good"){</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.streak++;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.streak = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// add stars</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.stars += earned;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// colorize selected button</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const selectedBtn = buttons[choiceIndex];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>selectedBtn.classList.add(choice.outcome);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// show feedback</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const fb = document.getElementById("feedbackBox");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>fb.classList.add("show");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(choice.outcome === "good"){</p>
+<p class="p1"><span class="Apple-converted-space">          </span>fb.className = "feedback show success";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>fb.textContent = `<span class="s1">✅</span> ${choice.msg} (+${earned} <span class="s1">⭐</span>)`;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if(this.streak === 3) this.toast("<span class="s1">🔥</span> Smart Streak x3! You’re on fire!");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if(this.streak === 5) this.toast("<span class="s1">🌟</span> Smart Streak x5! Flow Master!");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else if(choice.outcome === "ok"){</p>
+<p class="p1"><span class="Apple-converted-space">          </span>fb.className = "feedback show warn";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>fb.textContent = `<span class="s1">🟡</span> ${choice.msg} (+${earned} <span class="s1">⭐</span>)`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>fb.className = "feedback show error";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>fb.textContent = `<span class="s1">❌</span> ${choice.msg} (+${earned} <span class="s1">⭐</span>)`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// update flow label</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.updateStats();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// next mission</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.missionIndex++;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.renderMission();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}, 1600);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>updateStats(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("stars").textContent = "<span class="s1">⭐</span> " + this.stars;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("level").textContent = Math.floor(this.stars / 6) + 1;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("streak").textContent = this.streak + " <span class="s1">🔥</span>";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// flow meter</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let flowText = "<span class="s1">💧</span> Slow";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(this.turboOn) flowText = "<span class="s1">🚀</span> Fast";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(this.stars &gt;= 10) flowText = this.turboOn ? "<span class="s1">🚀</span> Turbo Fast" : "<span class="s1">💧</span> Steady";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(this.stars &gt;= 18) flowText = "<span class="s1">🌊</span> Super Flow";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("flow").textContent = flowText;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>updateProgress(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const pct = Math.min(100, Math.round((this.missionIndex / this.totalMissions) * 100));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("progressFill").style.width = pct + "%";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>showResults(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("missionArea").innerHTML = "";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const results = document.getElementById("resultsScreen");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>results.classList.add("active");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("finalStars").textContent = "<span class="s1">⭐</span> " + this.stars;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let msg = "Nice work! You learned how smart businesses move money.";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(this.stars &gt;= 20) msg = "<span class="s1">🏆</span> Amazing! You’re a Business Flow Master!";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else if(this.stars &gt;= 14) msg = "<span class="s1">🌟</span> Great job! Your money flow skills are strong!";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else if(this.stars &gt;= 8) msg = "<span class="s1">👏</span> Good progress! Try again to earn more stars!";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("finalMsg").textContent = msg;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.toast("<span class="s1">🎉</span> Demo complete! Want the next version with real dashboards + profile saving?");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>toast(text){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const t = document.getElementById("toast");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>t.textContent = text;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>t.classList.add("show");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setTimeout(()=&gt;t.classList.remove("show"), 2600);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>restart(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.missionIndex = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.stars = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.streak = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.difficulty = "Easy";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.updateStats();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.renderMission();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.toast("<span class="s1">🔄</span> Restarted! Let’s play again!");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>app.init();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
